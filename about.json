@@ -13,7 +13,8 @@
       "ssp-bold-italic":"assets/SourceSansPro-BoldItalic.ttf",
       "ssp-black":"assets/SourceSansPro-Black.ttf",
       "ssp-black-italic":"assets/SourceSansPro-BlackItalic.ttf",
-      "scp-regular":"assets/SourceCodePro-Regular.ttf"
+      "scp-regular":"assets/SourceCodePro-Regular.ttf",
+      "starwars":"assets/starwars.otf"
     },
     "color_schemes": {
       "Dracula": {

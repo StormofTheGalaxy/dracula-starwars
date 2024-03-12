@@ -1,0 +1,22 @@
+<script type="text/discourse-plugin" version="0.8">
+
+api.onPageChange(() => {
+
+  //append light sber progress bar to about page
+   var progressbar='<div class="progressbar clearfix" data-percent=100%><div class="progressbar-bar"></div></div>';
+
+   $('body.about-page H3').each(function() {
+        $(this).css("display","inline-block").append(progressbar);
+ }); 
+
+   $('.progressbar').each(function() {
+    $(this).find('.progressbar-bar').animate({
+      width: $(this).attr('data-percent')
+    }, 1000);
+  }); 
+    
+
+});
+
+
+</script>
