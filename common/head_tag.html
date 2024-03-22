@@ -1,3 +1,4 @@
+
 <script type="text/discourse-plugin" version="0.8">
 
 api.onPageChange(() => {
@@ -18,5 +19,54 @@ api.onPageChange(() => {
 
 });
 
+<script type="text/discourse-plugin" version="0.8">
+const { h } = require('virtual-dom');
+const { iconNode } = require("discourse-common/lib/icon-library");
+
+api.createWidget('discord-chat-menu', {
+  tagName: 'div.discord-panel',
+
+  html() {
+    return this.attach('menu-panel', {
+      contents: () => h('iframe', {
+                        "src": 'https://discordapp.com/widget?id=your-widget-ID&theme=light',
+                        "sandbox": "allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+                        "width": "350",
+                        "height": "500",
+                        "allowtransparency": "true",
+                        "frameborder": "0",
+                        "id": "chatwidget",
+                        "name": "chatwidget",}
+                    )
+
+    });
+  },
+
+  clickOutside() {
+    this.sendWidgetAction('toggleDiscordChat');
+  }
+});
+    
+api.decorateWidget('header-icons:before', function(helper) {
+  const headerState = helper.widget.parentWidget.state;
+  return helper.attach('header-dropdown', {
+      title: 'Discord Chat',
+      icon: 'fab-discord',
+      active: headerState.discordChatVisible,
+      action: 'toggleDiscordChat',
+    });
+});
+
+api.decorateWidget('header-icons:after', function(helper) {
+  const headerState = helper.widget.parentWidget.state;
+    if (headerState.discordChatVisible) {
+        return [helper.attach('discord-chat-menu')];
+    }
+});
+
+api.attachWidgetAction('header', 'toggleDiscordChat', function() {
+  this.state.discordChatVisible = !this.state.discordChatVisible;
+});
 
 </script>
+
