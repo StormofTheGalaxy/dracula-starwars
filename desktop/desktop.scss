@@ -1,12 +1,12 @@
 html {
-    font-size: 16px;
+    font-size: 15px;
     &.text-size-smaller {
-      font-size: 15px;
+      font-size: 1rpx;
     }
     &.text-size-larger {
-      font-size: 17px;
+      font-size: 16px;
     }
     &.text-size-largest {
-      font-size: 19px;
+      font-size: 18px;
     }
 }
