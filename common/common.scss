@@ -22,6 +22,15 @@ h5 {
   font-weight: normal;
 }
 
+.archetype-private_message {
+  --pm-border-radius: 2em;
+}
+
+:root {
+  --d-border-radius: initial;
+  --d-border-radius-large: initial;
+}
+
 .user-card h3 {
   font-family: 'Source Sans Pro', sans-serif;
 }
