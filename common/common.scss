@@ -374,3 +374,55 @@ img.avatar {
    -moz-box-shadow: 0px 0px 8px 2px rgba(255,56,56,1);
    box-shadow: 0px 0px 8px 2px rgba(255,56,56,1);
  }
+
+/* display nsfw blur and overlay text on any media in #nswf topics */
+.tag-nsfw { 
+	.topic-body .cooked img, 
+	.topic-body .cooked iframe, 
+	.topic-body .cooked .lazyYT-container, 
+	.topic-thumbnail img {
+        filter: blur(10px);	
+        -webkit-transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
+	}
+
+	.topic-body:hover .cooked img, 
+	.topic-body:hover .cooked iframe,
+	.topic-body:hover .cooked .lazyYT-container, 		
+	.topic-thumbnail:hover img {
+        filter: blur(0);	
+        -webkit-transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
+	}
+
+	.topic-body .cooked a.lightbox:before, 
+	.topic-body .cooked iframe:before,
+	.topic-thumbnail a:before {
+	    z-index:2;
+        padding: 5px;
+        font-size:1em;
+        position:absolute;
+
+        color:#fff;
+        content: '⚠️ Опасный контент - Наведите для просмотра';
+        background: #e86800;
+
+	}
+	
+	.topic-body .cooked a.lightbox:before, 
+	.topic-body .cooked iframe:before {
+        top: 15px;
+        left: 10px;
+	}
+
+	.topic-thumbnail a:before {
+        top: 65px;
+        left: 20px;
+	}
+	
+	.topic-body .cooked a.lightbox:hover:before, 
+	.topic-body .cooked iframe:hover:before,
+	.topic-thumbnail a:hover:before {		
+	    display:none;
+	}
+}
