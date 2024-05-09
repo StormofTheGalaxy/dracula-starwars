@@ -378,44 +378,56 @@ img.avatar {
 /* display nsfw blur and overlay text on any media in #nswf topics */
 /* display nsfw blur and overlay text on any media in #nswf topics */
 .tag-danger { 
-.topic-thumbnail {
-    overflow:hidden;
-}
-
-	.topic-body .cooked .lightbox img, 
-	.topic-body .cooked iframe, 
-	.topic-body .cooked .lazyYT-container, 
-	.topic-thumbnail img {
-    filter: blur(30px);	
-    -webkit-transition: .3s ease-in-out;
-    transition: .2s ease-in-out;
+  .topic-body .cooked img:not(.avatar,.emoji),
+  .topic-body .cooked .video-container,
+  .topic-body .cooked .lazyYT-container,
+  .has-thumbnail img,
+  .topic-thumbnail img {
+        filter: blur(10px);	
+        -webkit-transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
 	}
 
-	.topic-body .cooked a.lightbox:before, 
-	.topic-body .cooked iframe:before,
-	.topic-thumbnail a:before {
-	    z-index:2;
-    padding: 5px;
-    font-size:1em;
-    position:absolute;
+  .topic-body .cooked img:hover,
+  .topic-body .cooked iframe:hover,
+  .topic-body .cooked .lazyYT-container:hover,
+  .topic-body .cooked .video-container:hover,
+  .has-thumbnail:hover img,
+  .topic-thumbnail:hover img {
+        filter: blur(0);	
+        -webkit-transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
+	}
 
-    color:#fff;
-    content: '⚠️ Опасный контент - Нажмите для просмотра';
-    background: #000;
+  .topic-body .cooked a.lightbox:before,
+  .topic-body .cooked iframe:before,
+  .has-thumbnail a:before,
+  .topic-thumbnail a:before{
+	    z-index:2;
+        padding: 5px;
+        font-size:1em;
+        position:absolute;
+
+        color:#fff;
+        content: '⚠️ Опасный контент - Наведите для показа';
+        background: #e86800;
 
 	}
 	
 	.topic-body .cooked a.lightbox:before, 
 	.topic-body .cooked iframe:before {
-    top: 50%;
-    left: 10px;
-    right: 10px;
-    text-align:center;
+        top: 15px;
+        left: 10px;
 	}
 
 	.topic-thumbnail a:before {
-    top: 65px;
-    left: 20px;
+        top: 65px;
+        left: 20px;
 	}
 	
+	.topic-body .cooked a.lightbox:hover:before, 
+	.topic-body .cooked iframe:hover:before,
+	.topic-thumbnail a:hover:before {		
+	    display:none;
+	}
 }
