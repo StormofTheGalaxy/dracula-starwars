@@ -381,7 +381,7 @@ img.avatar {
   .topic-body .cooked img:not(.avatar,.emoji),
   .topic-body .cooked .video-container,
   .topic-body .cooked .video-placeholder-container,
-  .topic-body .cooked .lazyYT-container,
+  .topic-body .cooked .lazy-video-wrapper,
   .has-thumbnail img,
   .topic-thumbnail img {
         filter: blur(10px);	
@@ -391,7 +391,7 @@ img.avatar {
 
   .topic-body .cooked img:hover,
   .topic-body .cooked iframe:hover,
-  .topic-body .cooked .lazyYT-container:hover,
+  .topic-body .cooked .lazy-video-wrapper:hover,
   .topic-body .cooked .video-container:hover,
   .topic-body .cooked .video-placeholder-container:hover,
   .has-thumbnail:hover img,
