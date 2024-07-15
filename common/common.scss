@@ -44,6 +44,13 @@ h5 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.category-moderators {
+  content-visibility: hidden;
+	.progressbar {
+		content-visibility: hidden;
+	}
+}
+
 .d-modal.login-modal .login-title, .d-modal.create-account .login-title {
   font-family: 'Source Sans Pro', sans-serif;
 }
