@@ -14,7 +14,7 @@
     "ssp-black": "assets/SourceSansPro-Black.ttf",
     "ssp-black-italic": "assets/SourceSansPro-BlackItalic.ttf",
     "scp-regular": "assets/SourceCodePro-Regular.ttf",
-    "starwars":"assets/starwars-reup.otf"
+    "starwars2":"assets/starwars-reup.otf"
   },
   "color_schemes": {
     "Dracula": {
