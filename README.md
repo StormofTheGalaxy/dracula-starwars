@@ -1,6 +1,6 @@
 # Dracula for [Discourse](https://www.discourse.org/)
 
-> A dark theme for [Discourse](https://www.discourse.org/)
+> A dark theme for [Discourse](https://www.discourse.org/) with some star wars
 
 ![Screenshot](./screenshot.png)
 
