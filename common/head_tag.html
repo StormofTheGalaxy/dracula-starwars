@@ -6,7 +6,7 @@ window.addEventListener('push-token', function (e) {
     		url: '/fcm_notifications/subscribe',
     		data: {'_token': $('meta[name="csrf-token"]').attr('content'), 'subscription': e.detail}
     		}).done(function (data) {		
-    		alert('Успешно! ' + data);		
+    		alert('Успешно! ' + JSON.stringify(data));		
     	});
     }
 });
