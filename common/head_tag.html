@@ -1,18 +1,12 @@
 
 <script type="text/discourse-plugin" version="0.8">
-
-if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers['push-permission-request'] && window.webkit.messageHandlers['push-permission-state']) {
-    var iOSPushCapability = true;
-}
 window.addEventListener('push-token', (event: CustomEvent) => {
     if (event && event.detail){
         console.log(event.detail);
     }
 });
 
-if (this.iOSPushCapability) {
-			window.webkit.messageHandlers['push-token'].postMessage('push-token');
-}
+window.webkit.messageHandlers['push-token'].postMessage('push-token');
   
 api.onPageChange(() => {
 
