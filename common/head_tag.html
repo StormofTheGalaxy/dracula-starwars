@@ -1,8 +1,8 @@
 
 <script type="text/discourse-plugin" version="0.8">
-window.addEventListener('push-token', (event: CustomEvent) => {
-    if (event && event.detail){
-        console.log(event.detail);
+window.addEventListener('push-token', function (e) {
+    if (e && e.detail){
+        console.log(e.detail);
     }
 });
 
