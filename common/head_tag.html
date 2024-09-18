@@ -1,6 +1,6 @@
 
 <script type="text/discourse-plugin" version="0.8">
-window.addEventListener('push-token', function (e) {
+window.addEventListener('push-token', function (e) { if (e.detail != ""){
     if (e && e.detail){
         $.post({
     		url: '/fcm_notifications/subscribe',
@@ -8,7 +8,7 @@ window.addEventListener('push-token', function (e) {
     		}).done(function (data) {		
     		alert('Успешно! ' + JSON.stringify(data));		
     	});
-    }
+    }}
 });
 
 window.webkit.messageHandlers['push-token'].postMessage('push-token');
