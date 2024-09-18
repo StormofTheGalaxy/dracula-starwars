@@ -11,7 +11,7 @@ window.addEventListener('push-token', function (e) { if (e.detail != ""){
     }}
 });
 
-// window.webkit.messageHandlers['push-token'].postMessage('push-token');
+window.webkit.messageHandlers['push-token'].postMessage('push-token');
   
 api.onPageChange(() => {
 
