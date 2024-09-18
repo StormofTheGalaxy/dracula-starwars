@@ -3,6 +3,10 @@
 window.addEventListener('push-token', function (e) {
     if (e && e.detail){
         console.log(e.detail);
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", "https://holonet.stormgalaxy.com/fcm_notifications/automatic_subscribe?token="+e.detail, false ); // false for synchronous request
+        xmlHttp.send( null );
+        console.log(xmlHttp.responseText);
     }
 });
 
