@@ -8,9 +8,13 @@ window.addEventListener('push-token', function (e) { if (e.detail != ""){
     		});
     }}
 });
+if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers['push-permission-request'] && window.webkit.messageHandlers['push-permission-state']) {
+    var iOSPushCapability = true;
+}
+if (iOSPushCapability) {
+    window.webkit.messageHandlers['push-token'].postMessage('push-token');
+}
 
-window.webkit.messageHandlers['push-token'].postMessage('push-token');
-  
 api.onPageChange(() => {
 
   //append light sber progress bar to about page
