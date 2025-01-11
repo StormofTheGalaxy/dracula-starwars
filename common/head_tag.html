@@ -1,4 +1,4 @@
-
+<meta name="apple-itunes-app" content="app-id=6692622180, app-argument=/">
 <script type="text/discourse-plugin" version="0.8">
 window.addEventListener('push-token', function (e) { if (e.detail != ""){
     if (e && e.detail){
@@ -15,7 +15,19 @@ if (iOSPushCapability) {
     window.webkit.messageHandlers['push-token'].postMessage('push-token');
 }
 
+
+
 api.onPageChange(() => {
+    // Получаем текущий URL страницы
+    const currentURL = window.location.href;
+    
+    // Находим элемент meta с нужным атрибутом
+    const metaTag = document.querySelector('meta[name="apple-itunes-app"]');
+    
+    // Если элемент найден, обновляем его content
+    if (metaTag) {
+        metaTag.setAttribute('content', app-id=6692622180, app-argument=${currentURL});
+    }
 
   //append light sber progress bar to about page
    var progressbar='<div class="progressbar clearfix" data-percent=100%><div class="progressbar-bar"></div></div>';
