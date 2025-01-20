@@ -44,6 +44,12 @@ h5 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.sidebar-section-link-wrapper[data-list-item-name="invite"] .sidebar-section-link {
+  background-color: #f0f0f0; /* Измените на желаемый цвет */
+  border-radius: 5px; /* Пример изменения формы */
+  /* Добавьте любые другие стили, которые вы хотите применить */
+}
+
 .category-moderators {
   display: none;
 	.progressbar {
