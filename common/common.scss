@@ -49,6 +49,13 @@ h5 {
   border-radius: 5px; /* Пример изменения формы */
   /* Добавьте любые другие стили, которые вы хотите применить */
 }
+.sidebar-section-link-wrapper[data-list-item-name="invite"] .sidebar-section-link {
+  color: #000; /* Устанавливает цвет текста на черный */
+}
+
+.sidebar-section-link-wrapper[data-list-item-name="invite"] .sidebar-section-link .icon svg {
+  fill: #000; /* Устанавливает цвет иконки на черный */
+}
 
 .category-moderators {
   display: none;
