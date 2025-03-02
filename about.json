@@ -17,27 +17,5 @@
     "starwars":"assets/starwars.otf"
   },
   "color_schemes": {
-    "Dracula": {
-      "primary": "f2f2f2",
-      "primary-high": "9da0b5",
-      "primary-medium": "727694",
-      "primary-low-mid": "727694",
-      "primary-low": "44475A",
-      "primary-very-low": "44475A",
-      "secondary": "282a36",
-      "secondary-high": "44475A",
-      "tertiary": "bd93f9",
-      "tertiary-low": "44475A",
-      "tertiary-very-low": "44475A",
-      "quaternary": "8be9fd",
-      "header_background": "282a36",
-      "header_primary": "f2f2f2",
-      "highlight": "f1fa8c",
-      "danger": "ff5555",
-      "success": "50fa7b",
-      "love": "ff79c6",
-      "hover": "44475A",
-      "selected": "44475A"
-    }
   }
 }
