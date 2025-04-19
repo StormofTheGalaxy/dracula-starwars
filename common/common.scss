@@ -57,6 +57,31 @@ h5 {
   fill: #000; /* Устанавливает цвет иконки на черный */
 }
 
+// Меняем иконку профиля на горизонтальное многоточие (3 точки)
+#user-menu-button-profile {
+  .d-icon-user {
+    display: none; // Скрываем оригинальную иконку
+  }
+  
+  // Добавляем новую иконку
+  &::before {
+    content: "\f142"; // Unicode для fa-ellipsis-h
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  // Или если используется Discourse-иконка
+  svg {
+    use {
+      href="#ellipsis-h"; // Предполагая, что такая иконка есть в спрайте
+    }
+  }
+}
+
 .category-moderators {
   display: none;
 	.progressbar {
