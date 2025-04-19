@@ -451,3 +451,18 @@ pre code {
 	    display:none;
 	}
 }
+
+/* Change profile icon from user to ellipsis (three dots) */
+#user-menu-button-profile .d-icon-user {
+  display: none;
+}
+
+#user-menu-button-profile:before {
+  content: "•••";
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
