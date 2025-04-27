@@ -5,7 +5,8 @@
   --primary-400: var(--primary-medium);
   --primary-300: var(--primary-medium);
   --highlight-bg: var(--d-hover);
-  --topic-body-width: 100w;
+  --d-max-width: 3000px;
+  --topic-body-width: 2000px;
 }
 
 @import 'fonts';
